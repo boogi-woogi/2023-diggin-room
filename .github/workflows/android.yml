@@ -34,7 +34,7 @@ jobs:
       working-directory: ./android
       run: ./gradlew assembleDebug --stacktrace
       
-    - name: Run Ktlint
+    - name: Run ktlint
       run: ./android/gradlew ktlintCheck
       
     - name: Slack Upload APK
