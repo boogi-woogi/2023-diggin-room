@@ -34,6 +34,9 @@ jobs:
       working-directory: ./android
       run: ./gradlew assembleDebug --stacktrace
       
+    - name: Run Ktlint
+      run: ./gradlew ktlintCheck
+      
     - name: Slack Upload APK
       uses: MeilCli/slack-upload-file@v1.0.0
       with:
