@@ -31,8 +31,8 @@ jobs:
       working-directory: ./android
       run: ./gradlew assembleDebug --stacktrace
       
-    - name: Build with Gradle1
-      run: ./android/gradlew test
+    - name: Run test
+      run: ./gradlew test
     
     - name: Run ktlint
       working-directory: ./android
