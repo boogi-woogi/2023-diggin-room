@@ -27,13 +27,13 @@ jobs:
     - name: Init with Gradle
       run: ./android/gradlew init
 
-    - name: Build with Gradle1
-      run: ./android/gradlew build
-
     - name: Build with Gradle
       working-directory: ./android
       run: ./gradlew assembleDebug --stacktrace
       
+    - name: Build with Gradle1
+      run: ./android/gradlew test
+    
     - name: Run ktlint
       working-directory: ./android
       run: ./gradlew ktlintCheck
